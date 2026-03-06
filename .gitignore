@@ -3,6 +3,11 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+#cat boost info
+catboost_info/
+*.csv
+
+
 #data
 data/*
 # C extensions
