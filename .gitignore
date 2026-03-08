@@ -8,6 +8,12 @@ data/*
 # C extensions
 *.so
 
+
+catboost_info/
+*.tsv
+*.json
+events.out.tfevents*
+
 # Distribution / packaging
 .Python
 build/
