@@ -1,0 +1,45 @@
+
+=============================================================
+ ANALYSIS OF RESULTS — paste into final report
+=============================================================
+
+RQ1: Why do models fail under OOD conditions?
+──────────────────────────────────────────────
+The primary cause is vocabulary mismatch. Our AST-path TF-IDF
+vectorizer is trained on Python (91%), Java (4%), and C++ (4%).
+When applied to unseen languages like PHP and Go, the character
+n-gram vocabulary coverage drops below 15%, producing near-zero
+feature vectors. The model defaults to predicting Human (the
+majority class in OOD test at 77.7%), causing high false-negative
+rates. PHP achieves only F1=0.118 — the worst case — because its
+$variable syntax and <?php tags share almost nothing with the
+Python/Java/C++ training vocabulary.
+
+A secondary cause is class imbalance shift: training data is
+52% Machine, but the OOD test_sample is only 22% Machine.
+
+RQ2: Do structural/syntactic representations improve robustness?
+────────────────────────────────────────────────────────────────
+Partially. AST Paths + CatBoost achieves F1=0.513 on OOD vs
+F1=0.390 for the TF-IDF baseline — a 12-point improvement.
+The in-distribution to OOD drop remains large (0.935 → 0.513),
+showing structural features alone are insufficient.
+
+Positive Result (Seen Language):
+  Machine-generated Python with structured docstrings, type hints,
+  and balanced control flow is correctly classified. Human Python
+  with informal comments and abbreviated names is correctly
+  classified. CodeBERT achieves F1=0.9947 on the validation set.
+
+Negative Result (Unseen Language):
+  Identical LLM generation patterns in Go or PHP are misclassified
+  as human because AST tokens and character n-grams are
+  out-of-vocabulary. Near-zero features → predicts majority class.
+
+Interesting Edge Cases:
+  Human code from tutorials with clean docstrings → predicted as
+  Machine (false positive). LLM code prompted with competitive-
+  programming style (no docstrings, short names) → predicted as
+  Human (false negative). Models learn STYLE signals, not true
+  authorship signals.
+=============================================================
