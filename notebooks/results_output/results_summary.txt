@@ -1,0 +1,71 @@
+
+RESULTS SUMMARY -- Machine-Generated Code Detection
+Team Tech Titans | SemEval-2026 Task 13
+====================================================
+
+KEY FINDINGS
+------------
+
+1. AST path representations significantly outperform scalar structural
+   statistics. CatBoost on AST paths achieves Macro F1=0.935 in-distribution
+   vs F1=0.363 for scalar features, confirming that syntactic relationships
+   between code constructs are more discriminative than summary statistics.
+
+2. CodeBERT fine-tuned achieves Macro F1=0.9947 and ROC AUC=0.9997 on
+   the validation set across 3 epochs (lr=3e-4, eff_batch=256).
+   This is the best result across all models.
+
+3. All models collapse on OOD test. Best structural (AST Paths + CatBoost)
+   drops from 0.935 to 0.513 on OOD. PHP achieves the worst OOD result:
+   F1=0.118, because PHP's $variable syntax is almost entirely
+   out-of-vocabulary for a Python/Java/C++ trained TF-IDF vectorizer.
+
+4. Cross-language shift is the dominant OOD problem. Python-only OOD
+   evaluation improves F1 from 0.38 to 0.49, confirming the language
+   vocabulary mismatch as the primary failure mode.
+
+5. Length-only baseline achieves 62.4% accuracy, showing length is a
+   real but insufficient signal. Machine-generated code averages 146
+   words vs 94 for human-written code.
+
+IN-DISTRIBUTION RESULTS (Val set, 100K samples)
+------------------------------------------------
+Model                        Macro F1
+Length only (LR)             0.620
+TF-IDF + LR (baseline)       0.866
+Structural features + LR     0.880
+AST Scalar + CatBoost        0.779
+AST Paths + SVM              0.935
+AST Paths + CatBoost         0.935  [Best structural]
+CodeBERT (fine-tuned, ep3)   0.995  [Best overall]
+
+OOD RESULTS (test_sample, 1000 samples, 8 languages)
+------------------------------------------------------
+Model                        Macro F1   Drop
+TF-IDF + LR                  0.390     -0.476
+AST Scalar + CatBoost        0.363     -0.416
+AST Paths + SVM              0.422     -0.513
+AST Paths + CatBoost         0.513     -0.422  [Best structural OOD]
+CodeBERT                     pending
+
+OOD PER LANGUAGE (AST Paths + CatBoost)
+----------------------------------------
+Python (seen)       F1=0.935
+Java   (seen)       F1=0.935
+C++    (seen)       F1=0.935
+C#     (unseen)     F1=0.373
+Go     (unseen)     F1=0.421
+JavaScript (unseen) F1=0.547
+C      (unseen)     F1=0.305
+PHP    (unseen)     F1=0.118  [worst]
+
+OUTPUT FILES
+------------
+fig1_indist_vs_ood.png        -- Main in-dist vs OOD bar chart
+fig2_per_language_ood.png     -- Per-language OOD degradation
+fig3_confusion_matrices.png   -- Confusion matrices (in-dist + OOD)
+fig4_feature_importance.png   -- AST path feature importance
+fig5_codebert_training.png    -- CodeBERT training curve
+table1_main_results.csv       -- Full results table
+table2_ood_per_language.csv   -- Per-language OOD table
+table3_codebert_progress.csv  -- CodeBERT epoch-level metrics

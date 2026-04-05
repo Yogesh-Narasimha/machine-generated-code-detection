@@ -1,0 +1,14 @@
+
+GENERATOR ANALYSIS SUMMARY
+--------------------------
+Novel finding: detection difficulty varies significantly by LLM generator.
+
+Per-generator detection rates on test_sample (AST Paths + CatBoost):
+- Hardest: Llama-3.3-70B-Instruct (100.0% if len(gen_stats)>0 else 'N/A')
+- Easiest: Llama-3.2-90B-Vision-Instruct (0.0% if len(gen_stats)>0 else 'N/A')
+
+Interpretation:
+Code-specialized LLMs (StarCoder, CodeLlama) produce code resembling
+human contest submissions. General-purpose LLMs (GPT-4o, Llama, Gemini)
+produce more structured, template-like code with clear LLM markers.
+This motivates a generator-aware detection approach for future work.

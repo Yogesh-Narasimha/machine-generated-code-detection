@@ -1,0 +1,21 @@
+
+RQ4 ANSWER
+----------
+CatBoost feature importance combined with per-class TF-IDF weight analysis
+reveals clear signal directions.
+
+Machine-generated code is characterised by:
+- function_def->block->return->call->argument_list  (structured return patterns)
+- class_def->block->function_def->block->return     (class-level generation templates)
+- function_def->parameters->typed_parameter         (LLMs always add type hints)
+- block->expression_statement->call->string         (docstring generation pattern)
+
+Human-written code is characterised by:
+- for_statement->block->augmented_assignment         (iterative += patterns)
+- while_statement->block->expression_statement       (imperative loop patterns)
+- function_def->block->try_statement->except_clause  (ad-hoc error handling)
+- assignment->subscript->binary_operator             (manual indexing patterns)
+
+This confirms that models learn STYLE signals rather than true authorship.
+LLMs produce structured, template-like control flow. Humans produce
+irregular, iterative patterns that reflect exploratory problem-solving.
