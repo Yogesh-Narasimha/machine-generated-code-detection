@@ -1,0 +1,24 @@
+Python_Basic_AST_8_features
+=======================================================
+Val  Accuracy: 0.7633 | F1: 0.7208
+OOD  Accuracy: 0.7789 | F1: 0.5315
+
+Validation:
+              precision    recall  f1-score   support
+
+       Human       0.68      0.96      0.79     43620
+     Machine       0.94      0.58      0.72     47841
+
+    accuracy                           0.76     91461
+   macro avg       0.81      0.77      0.76     91461
+weighted avg       0.82      0.76      0.76     91461
+
+OOD:
+              precision    recall  f1-score   support
+
+       Human       0.82      0.89      0.86       223
+     Machine       0.60      0.47      0.53        80
+
+    accuracy                           0.78       303
+   macro avg       0.71      0.68      0.69       303
+weighted avg       0.77      0.78      0.77       303

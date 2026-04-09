@@ -1,0 +1,6 @@
+Fusion val F1: 0.9530
+Paths-only val F1: 0.9529
+Fusion OOD F1: 0.3870
+Paths-only OOD F1: 0.5126
+Val gain: +0.0001
+OOD gain: -0.1257

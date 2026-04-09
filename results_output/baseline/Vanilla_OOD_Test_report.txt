@@ -1,0 +1,20 @@
+Vanilla_OOD_Test
+=======================================================
+accuracy            : 0.3900
+binary_f1           : 0.3972
+macro_f1            : 0.3899
+macro_precision     : 0.5752
+macro_recall        : 0.5723
+roc_auc             : 0.7054
+pr_auc              : 0.4312
+mcc                 : 0.1475
+fnr                 : 0.0987
+
+              precision    recall  f1-score   support
+
+       Human       0.90      0.24      0.38       777
+     Machine       0.25      0.90      0.40       223
+
+    accuracy                           0.39      1000
+   macro avg       0.58      0.57      0.39      1000
+weighted avg       0.75      0.39      0.39      1000

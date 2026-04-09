@@ -1,0 +1,20 @@
+Random Forest (OOD Test)
+=======================================================
+accuracy            : 0.3410
+binary_f1           : 0.3682
+macro_f1            : 0.3398
+macro_precision     : 0.5310
+macro_recall        : 0.5264
+roc_auc             : 0.6556
+pr_auc              : 0.4149
+mcc                 : 0.0572
+fnr                 : 0.1390
+
+              precision    recall  f1-score   support
+
+       Human       0.83      0.19      0.31       777
+     Machine       0.23      0.86      0.37       223
+
+    accuracy                           0.34      1000
+   macro avg       0.53      0.53      0.34      1000
+weighted avg       0.70      0.34      0.32      1000

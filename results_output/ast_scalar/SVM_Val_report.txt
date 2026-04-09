@@ -1,0 +1,20 @@
+SVM (Val)
+=======================================================
+accuracy            : 0.6966
+binary_f1           : 0.6749
+macro_f1            : 0.6952
+macro_precision     : 0.7074
+macro_recall        : 0.7011
+roc_auc             : 0.7709
+pr_auc              : 0.8152
+mcc                 : 0.4085
+fnr                 : 0.3978
+
+              precision    recall  f1-score   support
+
+       Human       0.65      0.80      0.72     47695
+     Machine       0.77      0.60      0.67     52305
+
+    accuracy                           0.70    100000
+   macro avg       0.71      0.70      0.70    100000
+weighted avg       0.71      0.70      0.69    100000

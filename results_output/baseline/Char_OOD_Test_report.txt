@@ -1,0 +1,20 @@
+Char_OOD_Test
+=======================================================
+accuracy            : 0.2960
+binary_f1           : 0.3846
+macro_f1            : 0.2811
+macro_precision     : 0.6004
+macro_recall        : 0.5422
+roc_auc             : 0.6976
+pr_auc              : 0.4650
+mcc                 : 0.1302
+fnr                 : 0.0135
+
+              precision    recall  f1-score   support
+
+       Human       0.96      0.10      0.18       777
+     Machine       0.24      0.99      0.38       223
+
+    accuracy                           0.30      1000
+   macro avg       0.60      0.54      0.28      1000
+weighted avg       0.80      0.30      0.22      1000

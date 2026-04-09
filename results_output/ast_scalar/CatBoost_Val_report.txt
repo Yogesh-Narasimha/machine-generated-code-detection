@@ -1,0 +1,20 @@
+CatBoost (Val)
+=======================================================
+accuracy            : 0.7775
+binary_f1           : 0.7748
+macro_f1            : 0.7775
+macro_precision     : 0.7805
+macro_recall        : 0.7797
+roc_auc             : 0.8604
+pr_auc              : 0.8894
+mcc                 : 0.5602
+fnr                 : 0.2682
+
+              precision    recall  f1-score   support
+
+       Human       0.74      0.83      0.78     47695
+     Machine       0.82      0.73      0.77     52305
+
+    accuracy                           0.78    100000
+   macro avg       0.78      0.78      0.78    100000
+weighted avg       0.78      0.78      0.78    100000
