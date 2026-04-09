@@ -1,0 +1,90 @@
+GENERATOR ANALYSIS SUMMARY
+=================================================================
+Total machine-generated samples: 223
+Total generators found:          60
+
+Easy to detect (>=50%):  37 generators
+Hard to detect (<50%):   23 generators
+
+Hardest to detect:
+  Generator     : Llama-3.2-11B-Vision-Instruct
+  Detection rate: 0.000
+  Samples       : 2
+  Languages     : C#, Go
+
+Easiest to detect:
+  Generator     : starcoder2-7b
+  Detection rate: 1.000
+  Samples       : 2
+  Languages     : Java, Python
+
+INTERPRETATION FOR REPORT (RQ4):
+  Per-generator analysis reveals that not all LLMs produce equally
+  detectable code. Llama-3.2-11B-Vision-Instruct is the hardest to detect
+  (rate=0.00), suggesting its output most closely
+  mimics human structural patterns. starcoder2-7b is the easiest
+  (rate=1.00), likely producing highly templated
+  code with clear LLM stylistic markers (function wrappers, comments).
+
+Full results:
+                               gen_clean  n_samples  detection_rate                            languages
+           Llama-3.2-11B-Vision-Instruct          2        0.000000                               C#, Go
+            Meta-Llama-3.1-405B-Instruct          5        0.000000                         C#, Go, Java
+Llama-4-Maverick-17B-128E-Instruct-Turbo          1        0.000000                                   C#
+           Llama-3.2-90B-Vision-Instruct          3        0.000000                       C#, JavaScript
+                  Phi-3-mini-4k-instruct          1        0.000000                                   C#
+                        gemini-2.0-flash          1        0.000000                                 Java
+                            codegemma-2b          1        0.000000                                    C
+                         codegemma-7b-it          1        0.000000                                   C#
+                     gemini-1.5-flash-8b          1        0.000000                                 Java
+                        gemini-1.5-flash          1        0.000000                                 Java
+          gemini-2.5-flash-preview-05-20          1        0.000000                                   C#
+                          gemma-3-27b-it         10        0.100000  C, C#, Go, Java, JavaScript, Python
+                   Llama-3.1-8B-Instruct          7        0.142857        C, C#, Go, JavaScript, Python
+          Llama-4-Scout-17B-16E-Instruct          7        0.142857     C#, Go, Java, JavaScript, Python
+                      Qwen2.5-Coder-1.5B          5        0.200000                       C#, Go, Python
+                   gemini-2.0-flash-lite          7        0.285714  C, C#, C++, JavaScript, PHP, Python
+                        DeepSeek-V3-0324         10        0.300000   C, C#, C++, Go, JavaScript, Python
+                                  GPT-4o         21        0.333333 C, C#, C++, Java, JavaScript, Python
+                        Yi-Coder-9B-Chat          8        0.375000          C, Java, JavaScript, Python
+                           gemma-3-4b-it          5        0.400000             Java, JavaScript, Python
+                      Yi-Coder-1.5B-Chat          5        0.400000             Java, JavaScript, Python
+         Mistral-Small-24B-Instruct-2501          7        0.428571                  C, Go, Java, Python
+             Qwen2.5-Coder-1.5B-Instruct          7        0.428571               C#, JavaScript, Python
+                            codegemma-7b          2        0.500000                               Python
+                        Qwen2.5-Coder-7B          2        0.500000                         Java, Python
+                                   phi-2          4        0.500000                     C#, Java, Python
+               Qwen2.5-Coder-7B-Instruct          6        0.500000         Go, Java, JavaScript, Python
+                          gemma-3-12b-it          2        0.500000                           Go, Python
+       Meta-Llama-3.1-70B-Instruct-Turbo          4        0.500000                Java, JavaScript, PHP
+                Mistral-7B-Instruct-v0.3          2        0.500000                             C#, Java
+                   Phi-3.5-mini-instruct          4        0.500000             Java, JavaScript, Python
+                 Phi-3-small-8k-instruct          4        0.500000              C++, JavaScript, Python
+                                   phi-4          6        0.500000    C#, Java, JavaScript, PHP, Python
+             granite-8b-code-instruct-4k          2        0.500000                         Java, Python
+            Llama-3.3-70B-Instruct-Turbo          5        0.600000                        C++, Go, Java
+                 granite-8b-code-base-4k          3        0.666667                           Go, Python
+               Phi-4-multimodal-instruct          3        0.666667                         Java, Python
+              Mixtral-8x7B-Instruct-v0.1          3        0.666667                     C#, Java, Python
+                     Devstral-Small-2505          3        0.666667                                 Java
+                         CodeLlama-7b-hf          3        0.666667                         Java, Python
+             Qwen2.5-Codder-14B-Instruct          3        0.666667             Java, JavaScript, Python
+              Mistral-Nemo-Instruct-2407          4        0.750000              C++, JavaScript, Python
+                deepseek-coder-1.3b-base          5        0.800000                         Java, Python
+                Phi-3-medium-4k-instruct          6        0.833333                   JavaScript, Python
+                            Llama-3.1-8B          1        1.000000                               Python
+                            Llama-3.2-1B          2        1.000000                         Java, Python
+  Llama-4-Maverick-17B-128E-Instruct-FP8          1        1.000000                               Python
+               CodeLlama-70b-Instruct-hf          1        1.000000                               Python
+              Qwen2.5-Coder-32B-Instruct          1        1.000000                               Python
+                    Qwen2.5-72B-Instruct          2        1.000000                                  C++
+                  Llama-3.3-70B-Instruct          3        1.000000                               Python
+                deepseek-coder-6.7b-base          2        1.000000                          C++, Python
+                             Yi-Coder-9B          3        1.000000                               Python
+            deepseek-coder-1.3b-instruct          2        1.000000                               Python
+            deepseek-coder-6.7b-instruct          1        1.000000                               Python
+                           Yi-Coder-1.5B          5        1.000000                    C++, Java, Python
+                               starcoder          1        1.000000                               Python
+                          starcoder2-15b          1        1.000000                               Python
+                           starcoder2-3b          2        1.000000                               Python
+                           starcoder2-7b          2        1.000000                         Java, Python

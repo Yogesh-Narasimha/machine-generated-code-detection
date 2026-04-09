@@ -1,0 +1,20 @@
+SVM (OOD Test)
+=======================================================
+accuracy            : 0.4240
+binary_f1           : 0.3885
+macro_f1            : 0.4221
+macro_precision     : 0.5561
+macro_recall        : 0.5654
+roc_auc             : 0.6070
+pr_auc              : 0.4110
+mcc                 : 0.1211
+fnr                 : 0.1794
+
+              precision    recall  f1-score   support
+
+       Human       0.86      0.31      0.46       777
+     Machine       0.25      0.82      0.39       223
+
+    accuracy                           0.42      1000
+   macro avg       0.56      0.57      0.42      1000
+weighted avg       0.72      0.42      0.44      1000

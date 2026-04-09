@@ -1,0 +1,20 @@
+Random Forest (Val)
+=======================================================
+accuracy            : 0.9350
+binary_f1           : 0.9358
+macro_f1            : 0.9350
+macro_precision     : 0.9356
+macro_recall        : 0.9363
+roc_auc             : 0.9820
+pr_auc              : 0.9855
+mcc                 : 0.8719
+fnr                 : 0.0932
+
+              precision    recall  f1-score   support
+
+       Human       0.90      0.97      0.93     47695
+     Machine       0.97      0.91      0.94     52305
+
+    accuracy                           0.93    100000
+   macro avg       0.94      0.94      0.93    100000
+weighted avg       0.94      0.93      0.93    100000

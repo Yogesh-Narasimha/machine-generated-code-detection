@@ -1,0 +1,5 @@
+Standard paths + Default: val=0.9529, ood=0.5126, gain=+0.0000
+Standard paths + Class-weighted: val=0.9528, ood=0.5164, gain=+0.0038
+Standard paths + Platt scaling: val=0.9355, ood=0.3740, gain=-0.1387
+Universal paths + Default: val=0.9523, ood=0.4426, gain=-0.0701
+Universal paths + Class-weighted: val=0.9513, ood=0.4631, gain=-0.0496

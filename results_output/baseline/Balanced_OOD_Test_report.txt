@@ -1,0 +1,20 @@
+Balanced_OOD_Test
+=======================================================
+accuracy            : 0.2850
+binary_f1           : 0.3810
+macro_f1            : 0.2674
+macro_precision     : 0.5960
+macro_recall        : 0.5351
+roc_auc             : 0.7026
+pr_auc              : 0.4631
+mcc                 : 0.1161
+fnr                 : 0.0135
+
+              precision    recall  f1-score   support
+
+       Human       0.96      0.08      0.15       777
+     Machine       0.24      0.99      0.38       223
+
+    accuracy                           0.28      1000
+   macro avg       0.60      0.54      0.27      1000
+weighted avg       0.80      0.28      0.20      1000

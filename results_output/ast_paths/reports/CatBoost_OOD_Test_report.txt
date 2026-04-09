@@ -1,0 +1,20 @@
+CatBoost (OOD Test)
+=======================================================
+accuracy            : 0.5790
+binary_f1           : 0.3328
+macro_f1            : 0.5126
+macro_precision     : 0.5290
+macro_recall        : 0.5404
+roc_auc             : 0.6104
+pr_auc              : 0.4313
+mcc                 : 0.0685
+fnr                 : 0.5291
+
+              precision    recall  f1-score   support
+
+       Human       0.80      0.61      0.69       777
+     Machine       0.26      0.47      0.33       223
+
+    accuracy                           0.58      1000
+   macro avg       0.53      0.54      0.51      1000
+weighted avg       0.68      0.58      0.61      1000

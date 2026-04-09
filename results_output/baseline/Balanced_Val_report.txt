@@ -1,0 +1,20 @@
+Balanced_Val
+=======================================================
+accuracy            : 0.9290
+binary_f1           : 0.9309
+macro_f1            : 0.9290
+macro_precision     : 0.9288
+macro_recall        : 0.9297
+roc_auc             : 0.9814
+pr_auc              : 0.9841
+mcc                 : 0.8585
+fnr                 : 0.0854
+
+              precision    recall  f1-score   support
+
+       Human       0.91      0.94      0.93     47695
+     Machine       0.95      0.91      0.93     52305
+
+    accuracy                           0.93    100000
+   macro avg       0.93      0.93      0.93    100000
+weighted avg       0.93      0.93      0.93    100000

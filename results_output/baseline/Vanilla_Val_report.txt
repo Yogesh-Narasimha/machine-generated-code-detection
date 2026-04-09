@@ -1,0 +1,20 @@
+Vanilla_Val
+=======================================================
+accuracy            : 0.8687
+binary_f1           : 0.8659
+macro_f1            : 0.8687
+macro_precision     : 0.8737
+macro_recall        : 0.8716
+roc_auc             : 0.9337
+pr_auc              : 0.9517
+mcc                 : 0.7453
+fnr                 : 0.1899
+
+              precision    recall  f1-score   support
+
+       Human       0.82      0.93      0.87     47695
+     Machine       0.93      0.81      0.87     52305
+
+    accuracy                           0.87    100000
+   macro avg       0.87      0.87      0.87    100000
+weighted avg       0.88      0.87      0.87    100000
